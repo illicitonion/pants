@@ -74,6 +74,7 @@ matrix:
           sh -c "
             set -x ;
             uname -a ;
+            uname -i ;
             getconf LONG_BIT ;
             arch ;
             cd $TRAVIS_BUILD_DIR && ./build-support/bin/native/prepare-binary-deploy.sh
