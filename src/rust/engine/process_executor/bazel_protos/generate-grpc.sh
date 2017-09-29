@@ -26,7 +26,7 @@ cache_path="${HOME}/.cache/${path}"
 
 if [ ! -x "${cache_path}" ]; then
   mkdir -p "$(dirname "${cache_path}")"
-  curl "https://binaries.pantsbuild.org/${path}" > "${cache_path}"
+  curl "https://reich.illicitonion.com/dump/20170929/protoc" > "${cache_path}"
   chmod 0755 "${cache_path}"
 fi
 
