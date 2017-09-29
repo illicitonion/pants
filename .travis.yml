@@ -66,7 +66,7 @@ matrix:
         - NATIVE_ENGINE_DEPLOY=1
         # Use the standard python-2.7 docker Debian Wheezy image for binary compatibility with old
         # linux distros.
-        - DOCKER_IMAGE="python:2.7.13-wheezy"
+        - DOCKER_IMAGE="python:2.7.13-jessie"
       before_install:
         # Remove any Ubuntu binary cruft before building.
         - git clean -fdx
