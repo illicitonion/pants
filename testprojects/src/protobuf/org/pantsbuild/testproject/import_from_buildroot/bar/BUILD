@@ -5,3 +5,4 @@ java_protobuf_library(
   sources=globs('*.proto'),
   dependencies=['testprojects/src/protobuf/org/pantsbuild/testproject/import_from_buildroot/foo']
 )
+
