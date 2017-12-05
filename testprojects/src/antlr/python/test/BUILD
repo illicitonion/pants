@@ -15,3 +15,4 @@ python_antlr_library(
   module = 'pants_antlr.test.bogus',
   sources = ['bogus.g'],
 )
+
