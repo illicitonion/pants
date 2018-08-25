@@ -1,5 +1,3 @@
-use hashing;
-
 impl<'a> From<&'a hashing::Digest> for super::remote_execution::Digest {
   fn from(d: &hashing::Digest) -> Self {
     let mut digest = super::remote_execution::Digest::new();
@@ -19,8 +17,6 @@ impl<'a> From<&'a super::remote_execution::Digest> for Result<hashing::Digest, S
 
 #[cfg(test)]
 mod tests {
-  use hashing;
-
   #[test]
   fn from_our_digest() {
     let our_digest = &hashing::Digest(

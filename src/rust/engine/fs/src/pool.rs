@@ -4,7 +4,7 @@
 use std::sync::RwLock;
 
 use futures::future::IntoFuture;
-use futures_cpupool::{self, CpuFuture, CpuPool};
+use futures_cpupool::{CpuFuture, CpuPool};
 
 ///
 /// A wrapper around a CpuPool, to add the ability to drop the pool before forking,

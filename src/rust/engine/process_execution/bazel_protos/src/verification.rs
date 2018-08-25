@@ -1,4 +1,3 @@
-use protobuf;
 use crate::remote_execution;
 
 use std::collections::HashSet;

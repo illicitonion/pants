@@ -38,6 +38,7 @@ use std::time::{Duration, Instant};
 use fnv::FnvHasher;
 
 use futures::future::{self, Future};
+use hashing;
 use petgraph::graph::DiGraph;
 use petgraph::visit::EdgeRef;
 use petgraph::Direction;
@@ -735,7 +736,7 @@ mod tests {
   use futures::future::{self, Future};
   use hashing::Digest;
 
-  use self::rand::Rng;
+  use rand::Rng;
 
   use super::{EntryId, Graph, InvalidationResult, Node, NodeContext, NodeError};
 

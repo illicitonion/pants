@@ -1,14 +1,12 @@
 // Copyright 2017 Pants project contributors (see CONTRIBUTORS.md).
 // Licensed under the Apache License, Version 2.0 (see LICENSE).
 
-use bazel_protos;
 use boxfuture::{BoxFuture, Boxable};
 use futures::future::{self, join_all};
 use futures::Future;
 use hashing::{Digest, Fingerprint};
-use indexmap::{self, IndexMap};
+use indexmap::IndexMap;
 use itertools::Itertools;
-use protobuf;
 use std::ffi::OsString;
 use std::fmt;
 use std::path::PathBuf;

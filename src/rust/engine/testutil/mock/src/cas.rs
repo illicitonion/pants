@@ -1,10 +1,6 @@
 use std::collections::HashMap;
 use std::sync::{Arc, Mutex};
 
-use bazel_protos;
-use futures;
-use grpcio;
-
 use bytes::Bytes;
 use futures::{Future, IntoFuture, Stream};
 use hashing::{Digest, Fingerprint};

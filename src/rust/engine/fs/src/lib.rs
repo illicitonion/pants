@@ -31,11 +31,11 @@ mod pool;
 pub use crate::pool::ResettablePool;
 
 #[macro_use]
+extern crate boxfuture;
 #[macro_use]
+extern crate lazy_static;
 #[macro_use]
-#[cfg(test)]
-#[cfg(test)]
-#[cfg(test)]
+extern crate log;
 
 use std::cmp::min;
 use std::io::{self, Read};
@@ -49,7 +49,7 @@ use futures::future::{self, Future};
 use glob::Pattern;
 use ignore::gitignore::{Gitignore, GitignoreBuilder};
 
-use boxfuture::{BoxFuture, Boxable};
+use ::boxfuture::{BoxFuture, Boxable};
 
 #[derive(Clone, Debug, Eq, Hash, PartialEq)]
 pub enum Stat {
@@ -764,7 +764,7 @@ pub fn safe_create_dir_all_ioerror(path: &Path) -> Result<(), io::Error> {
     Err(e) => return Err(e),
   }
   match path.parent() {
-    Some(p) => try!(safe_create_dir_all_ioerror(p)),
+    Some(p) => safe_create_dir_all_ioerror(p)?,
     None => return Ok(()),
   }
   match fs::create_dir(path) {

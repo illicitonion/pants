@@ -1,6 +1,5 @@
 use crate::FileContent;
 
-use bazel_protos;
 use boxfuture::{BoxFuture, Boxable};
 use bytes::Bytes;
 use futures::{future, Future};
@@ -615,7 +614,7 @@ mod local {
   use hashing::{Digest, Fingerprint};
   use lmdb::Error::{KeyExist, NotFound};
   use lmdb::{
-    self, Cursor, Database, DatabaseFlags, Environment, RwTransaction, Transaction, WriteFlags,
+    Cursor, Database, DatabaseFlags, Environment, RwTransaction, Transaction, WriteFlags,
     NO_OVERWRITE, NO_SYNC, NO_TLS,
   };
   use resettable::Resettable;
@@ -1564,12 +1563,10 @@ mod local {
 mod remote {
   use super::EntryType;
 
-  use bazel_protos;
   use boxfuture::{BoxFuture, Boxable};
   use bytes::{Bytes, BytesMut};
   use digest::{Digest as DigestTrait, FixedOutput};
-  use futures::{self, future, Future, Sink, Stream};
-  use grpcio;
+  use futures::{future, Future, Sink, Stream};
   use hashing::{Digest, Fingerprint};
   use resettable::Resettable;
   use sha2::Sha256;

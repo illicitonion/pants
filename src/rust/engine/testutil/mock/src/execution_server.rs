@@ -7,10 +7,7 @@ use std::thread::sleep;
 use std::time::Duration;
 use std::time::Instant;
 
-use bazel_protos;
 use futures::{Future, Sink};
-use grpcio;
-use protobuf;
 
 ///
 /// A MockOperation to be used with MockExecution.
@@ -181,7 +178,7 @@ impl MockResponder {
 
   fn send_next_operation_unary(
     &self,
-    sink: grpcio::UnarySink<super::bazel_protos::operations::Operation>,
+    sink: grpcio::UnarySink<::bazel_protos::operations::Operation>,
   ) {
     if let Some(MockOperation { op, duration }) = self
       .mock_execution
@@ -211,7 +208,7 @@ impl MockResponder {
   fn send_next_operation_stream(
     &self,
     ctx: &grpcio::RpcContext,
-    sink: grpcio::ServerStreamingSink<super::bazel_protos::operations::Operation>,
+    sink: grpcio::ServerStreamingSink<::bazel_protos::operations::Operation>,
   ) {
     match self
       .mock_execution
