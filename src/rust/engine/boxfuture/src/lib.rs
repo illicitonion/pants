@@ -1,3 +1,4 @@
+#![feature(rust_2018_preview, uniform_paths)]
 // This file provides backward-compatibility for the deprecated BoxFuture type from futures.
 // https://github.com/alexcrichton/futures-rs/issues/228 has background for its removal.
 // This avoids needing to call Box::new() around every future that we produce.

@@ -1,3 +1,4 @@
+#![feature(rust_2018_preview, uniform_paths)]
 // Enable all clippy lints except for many of the pedantic ones. It's a shame this needs to be copied and pasted across crates, but there doesn't appear to be a way to include inner attributes from a common source.
 #![cfg_attr(
   feature = "cargo-clippy",
