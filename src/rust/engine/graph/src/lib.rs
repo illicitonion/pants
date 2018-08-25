@@ -28,8 +28,8 @@ extern crate petgraph;
 mod entry;
 mod node;
 
-pub use entry::Entry;
-use entry::{EntryKey, Generation, RunToken};
+pub use crate::entry::Entry;
+use crate::entry::{EntryKey, Generation, RunToken};
 
 use std::collections::binary_heap::BinaryHeap;
 use std::collections::{HashMap, HashSet, VecDeque};
@@ -48,7 +48,7 @@ use petgraph::visit::EdgeRef;
 use petgraph::Direction;
 
 use boxfuture::{BoxFuture, Boxable};
-pub use node::{EntryId, Node, NodeContext, NodeError, NodeTracer, NodeVisualizer};
+pub use crate::node::{EntryId, Node, NodeContext, NodeError, NodeTracer, NodeVisualizer};
 
 type FNV = BuildHasherDefault<FnvHasher>;
 

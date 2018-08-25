@@ -9,18 +9,18 @@ use std::time::Duration;
 use futures::future::{self, Future};
 
 use boxfuture::{BoxFuture, Boxable};
-use context::{Context, Core};
-use core::{throw, Failure, Key, Noop, TypeConstraint, Value, Variants};
-use externs;
+use crate::context::{Context, Core};
+use crate::core::{throw, Failure, Key, Noop, TypeConstraint, Value, Variants};
+use crate::externs;
 use fs::{
   self, Dir, DirectoryListing, File, FileContent, GlobMatching, Link, PathGlobs, PathStat,
   StoreFileByDigest, StrictGlobMatching, VFS,
 };
 use hashing;
 use process_execution::{self, CommandRunner};
-use rule_graph;
-use selectors;
-use tasks::{self, Intrinsic, IntrinsicKind};
+use crate::rule_graph;
+use crate::selectors;
+use crate::tasks::{self, Intrinsic, IntrinsicKind};
 
 use graph::{Entry, Node, NodeError, NodeTracer, NodeVisualizer};
 

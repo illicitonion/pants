@@ -4,7 +4,7 @@
 use std::os::raw;
 use std::sync::Mutex;
 
-use externs;
+use crate::externs;
 
 pub type RawHandle = *const raw::c_void;
 

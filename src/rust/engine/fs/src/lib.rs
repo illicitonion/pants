@@ -20,15 +20,15 @@
 #![cfg_attr(feature = "cargo-clippy", allow(mutex_atomic))]
 
 mod glob_matching;
-pub use glob_matching::GlobMatching;
+pub use crate::glob_matching::GlobMatching;
 mod snapshot;
-pub use snapshot::{
+pub use crate::snapshot::{
   OneOffStoreFileByDigest, Snapshot, StoreFileByDigest, EMPTY_DIGEST, EMPTY_FINGERPRINT,
 };
 mod store;
-pub use store::Store;
+pub use crate::store::Store;
 mod pool;
-pub use pool::ResettablePool;
+pub use crate::pool::ResettablePool;
 
 extern crate bazel_protos;
 #[macro_use]

@@ -10,13 +10,13 @@ use futures::future::{self, Future};
 use futures::sync::oneshot;
 
 use boxfuture::{BoxFuture, Boxable};
-use context::{Context, Core};
-use core::{Failure, Key, TypeConstraint, TypeId, Value, Variants};
+use crate::context::{Context, Core};
+use crate::core::{Failure, Key, TypeConstraint, TypeId, Value, Variants};
 use fs::{self, GlobMatching, PosixFS};
 use graph::{EntryId, Graph, Node, NodeContext};
-use nodes::{NodeKey, Select, Tracer, TryInto, Visualizer};
-use rule_graph;
-use selectors;
+use crate::nodes::{NodeKey, Select, Tracer, TryInto, Visualizer};
+use crate::rule_graph;
+use crate::selectors;
 
 ///
 /// A Session represents a related series of requests (generally: one run of the pants CLI) on an

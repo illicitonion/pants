@@ -9,10 +9,10 @@ use std::os::unix::ffi::{OsStrExt, OsStringExt};
 use std::string::FromUtf8Error;
 use std::sync::RwLock;
 
-use core::{Failure, Function, Key, TypeConstraint, TypeId, Value};
+use crate::core::{Failure, Function, Key, TypeConstraint, TypeId, Value};
 use enum_primitive::FromPrimitive;
-use handles::{DroppingHandle, Handle};
-use interning::Interns;
+use crate::handles::{DroppingHandle, Handle};
+use crate::interning::Interns;
 use log;
 
 pub fn eval(python: &str) -> Result<Value, Failure> {

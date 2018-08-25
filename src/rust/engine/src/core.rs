@@ -8,8 +8,8 @@ use std::ops::Deref;
 use std::sync::Arc;
 use std::{fmt, hash};
 
-use externs;
-use handles::Handle;
+use crate::externs;
+use crate::handles::Handle;
 
 pub type FNV = hash::BuildHasherDefault<FnvHasher>;
 

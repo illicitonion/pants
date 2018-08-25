@@ -4,10 +4,10 @@
 use std::collections::{hash_map, HashMap, HashSet};
 use std::io;
 
-use core::{Function, Key, TypeConstraint, TypeId, Value, ANY_TYPE};
-use externs;
-use selectors::{Get, Select};
-use tasks::{Intrinsic, Task, Tasks};
+use crate::core::{Function, Key, TypeConstraint, TypeId, Value, ANY_TYPE};
+use crate::externs;
+use crate::selectors::{Get, Select};
+use crate::tasks::{Intrinsic, Task, Tasks};
 
 #[derive(Eq, Hash, PartialEq, Clone, Debug)]
 pub struct UnreachableError {
