@@ -367,7 +367,6 @@ impl StoreFileByDigest<String> for OneOffStoreFileByDigest {
 
 #[cfg(test)]
 mod tests {
-  extern crate tempfile;
   use futures::future::Future;
   use hashing::{Digest, Fingerprint};
   use testutil::data::TestDirectory;

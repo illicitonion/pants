@@ -37,22 +37,9 @@ mod tasks;
 mod types;
 
 #[macro_use]
-extern crate boxfuture;
-extern crate dirs;
 #[macro_use]
-extern crate enum_primitive;
-extern crate fnv;
-extern crate fs;
-extern crate futures;
-extern crate graph;
-extern crate hashing;
 #[macro_use]
-extern crate lazy_static;
 #[macro_use]
-extern crate log;
-extern crate process_execution;
-extern crate resettable;
-extern crate tokio;
 
 use std::ffi::CStr;
 use std::fs::File;

@@ -16,12 +16,6 @@
 // Arc<Mutex> can be more clear than needing to grok Orderings:
 #![cfg_attr(feature = "cargo-clippy", allow(mutex_atomic))]
 
-extern crate bazel_protos;
-extern crate bytes;
-extern crate digest;
-extern crate hashing;
-extern crate protobuf;
-extern crate sha2;
 
 use bytes::Bytes;
 use std::io::Write;

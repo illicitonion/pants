@@ -16,30 +16,11 @@
 // Arc<Mutex> can be more clear than needing to grok Orderings:
 #![cfg_attr(feature = "cargo-clippy", allow(mutex_atomic))]
 
-extern crate async_semaphore;
-extern crate bazel_protos;
 #[macro_use]
-extern crate boxfuture;
-extern crate bytes;
-extern crate digest;
-extern crate fs;
-extern crate futures;
-extern crate futures_timer;
-extern crate grpcio;
-extern crate hashing;
 #[macro_use]
-extern crate log;
 #[cfg(test)]
-extern crate mock;
-extern crate protobuf;
-extern crate resettable;
-extern crate sha2;
 #[cfg(test)]
-extern crate tempfile;
 #[cfg(test)]
-extern crate testutil;
-extern crate tokio_codec;
-extern crate tokio_process;
 
 use boxfuture::BoxFuture;
 use bytes::Bytes;

@@ -1,5 +1,3 @@
-extern crate log;
-extern crate tempfile;
 
 use boxfuture::{BoxFuture, Boxable};
 use fs::{self, GlobMatching, PathGlobs, PathStatGetter, Snapshot, StrictGlobMatching};
@@ -318,8 +316,6 @@ impl super::CommandRunner for CommandRunner {
 
 #[cfg(test)]
 mod tests {
-  extern crate tempfile;
-  extern crate testutil;
 
   use super::super::CommandRunner as CommandRunnerTrait;
   use super::{ExecuteProcessRequest, FallibleExecuteProcessResult};

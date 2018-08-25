@@ -17,15 +17,7 @@
 #![cfg_attr(feature = "cargo-clippy", allow(mutex_atomic))]
 
 #[macro_use]
-extern crate boxfuture;
-extern crate bytes;
 #[macro_use(value_t)]
-extern crate clap;
-extern crate env_logger;
-extern crate fs;
-extern crate futures;
-extern crate hashing;
-extern crate protobuf;
 
 use boxfuture::{BoxFuture, Boxable};
 use bytes::Bytes;

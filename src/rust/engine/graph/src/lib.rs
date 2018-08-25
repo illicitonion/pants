@@ -19,11 +19,6 @@
 // Arc<Mutex> can be more clear than needing to grok Orderings:
 #![cfg_attr(feature = "cargo-clippy", allow(mutex_atomic))]
 
-extern crate boxfuture;
-extern crate fnv;
-extern crate futures;
-extern crate hashing;
-extern crate petgraph;
 
 mod entry;
 mod node;
@@ -729,7 +724,6 @@ impl<'a, N: Node + 'a> Iterator for Walk<'a, N> {
 
 #[cfg(test)]
 mod tests {
-  extern crate rand;
 
   use std::cmp;
   use std::collections::HashSet;

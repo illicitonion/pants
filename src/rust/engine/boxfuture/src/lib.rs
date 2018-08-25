@@ -20,7 +20,6 @@
 // Arc<Mutex> can be more clear than needing to grok Orderings:
 #![cfg_attr(feature = "cargo-clippy", allow(mutex_atomic))]
 
-extern crate futures;
 
 use futures::future::Future;
 

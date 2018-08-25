@@ -19,9 +19,6 @@
 // Arc<Mutex> can be more clear than needing to grok Orderings:
 #![cfg_attr(feature = "cargo-clippy", allow(mutex_atomic))]
 
-extern crate digest;
-extern crate hex;
-extern crate sha2;
 
 use digest::{Digest as DigestTrait, FixedOutput};
 use sha2::Sha256;

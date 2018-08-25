@@ -30,34 +30,12 @@ pub use crate::store::Store;
 mod pool;
 pub use crate::pool::ResettablePool;
 
-extern crate bazel_protos;
 #[macro_use]
-extern crate boxfuture;
-extern crate byteorder;
-extern crate bytes;
-extern crate digest;
-extern crate futures;
-extern crate futures_cpupool;
-extern crate glob;
-extern crate grpcio;
-extern crate hashing;
-extern crate ignore;
-extern crate indexmap;
-extern crate itertools;
 #[macro_use]
-extern crate lazy_static;
-extern crate lmdb;
 #[macro_use]
-extern crate log;
 #[cfg(test)]
-extern crate mock;
-extern crate protobuf;
-extern crate resettable;
-extern crate sha2;
 #[cfg(test)]
-extern crate tempfile;
 #[cfg(test)]
-extern crate testutil;
 
 use std::cmp::min;
 use std::io::{self, Read};
@@ -803,8 +781,6 @@ fn safe_create_dir_all(path: &Path) -> Result<(), String> {
 
 #[cfg(test)]
 mod posixfs_test {
-  extern crate tempfile;
-  extern crate testutil;
 
   use super::{
     Dir, DirectoryListing, File, Link, PathStat, PathStatGetter, PosixFS, ResettablePool, Stat,

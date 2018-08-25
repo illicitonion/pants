@@ -16,24 +16,9 @@
 // Arc<Mutex> can be more clear than needing to grok Orderings:
 #![cfg_attr(feature = "cargo-clippy", allow(mutex_atomic))]
 
-extern crate bazel_protos;
-extern crate clap;
-extern crate dirs;
-extern crate env_logger;
-extern crate errno;
-extern crate fs;
-extern crate fuse;
-extern crate futures;
-extern crate hashing;
-extern crate libc;
 #[macro_use]
-extern crate log;
-extern crate protobuf;
 #[cfg(test)]
-extern crate tempfile;
 #[cfg(test)]
-extern crate testutil;
-extern crate time;
 
 use futures::future::Future;
 use hashing::{Digest, Fingerprint};
@@ -680,8 +665,6 @@ fn unmount(mount_path: &str) -> i32 {
 
 #[cfg(test)]
 mod test {
-  extern crate tempfile;
-  extern crate testutil;
 
   use super::mount;
   use fs;

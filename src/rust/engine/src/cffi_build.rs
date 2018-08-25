@@ -1,6 +1,4 @@
 #![feature(rust_2018_preview, uniform_paths)]
-extern crate build_utils;
-extern crate cc;
 
 /*
 
