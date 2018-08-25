@@ -1,4 +1,6 @@
+cargo-features = ["edition"]
 [project]
+edition = "2018"
 version = "0.0.1"
 name = "engine"
 authors = [ "Pants Build <pantsbuild@gmail.com>" ]
